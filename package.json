@@ -13,5 +13,8 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3"
+  },  // ここにカンマを記述
+  "engines" : {
+    "node": "16.16.0"  // ここに先ほど確認したバージョンを記述
   }
 }
