@@ -6,6 +6,6 @@ class CreateComments < ActiveRecord::Migration[4.2]
       t.references :prototype, limit: 20, type: :bigint, foreign_key: true
       t.timestamps null: false
     end
-    add_foreign_key :user,:prototype,:comments 
+    add_foreign_key :user,:prototype 
   end
 end
