@@ -1,10 +1,11 @@
-class CreateComments < ActiveRecord::Migration[4.2]
+class CreateComments < ActiveRecord::Migration[６.0]
   def change
     create_table :comments do |t|
       t.text       :text
-      t.references :user, index: true, foreign_key: true
+      t.bigint :user, limit: 20
       t.references :prototype, index: true, foreign_key: true
       t.timestamps null: false
     end
+    add_foreign_key :user,:comments 
   end
 end
